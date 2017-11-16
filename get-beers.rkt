@@ -10,6 +10,8 @@
         total
         (get-beers/1 (+ (quotient beer-new 4) (quotient beer-new 2))  
                      total))))
+;以上版本存在逻辑错误。没有考虑到交换中剩余瓶盖和空瓶子可以和后边的合起来换啤酒。
+;====================================================================
 
 ;迭代计算啤酒数量(2.0版)：
 (define (get-beers/2 beer-new lid empty-bottle beer-total)
